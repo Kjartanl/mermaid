@@ -4,19 +4,18 @@
 gitGraph
 
 commit id: "First commit"
-commit id: "First code"
+
 branch "dev"
-commit id:"Created dev"
+commit id:"First dev commit"
+
 checkout main
 commit id:"Add config files"
 
 checkout dev
 merge main id:"Merged configs"
-commit id:"Add dev config files"
 commit
 
 branch kjartan
-commit
 commit
 
 checkout main

@@ -4,27 +4,24 @@
 
 classDiagram
 
-    note "From Duck till Zebra"
-    Animal <|-- Duck
+    Vehicle <|-- Car
+    Vehicle <|-- Plane
+    Vehicle <|-- Ship
 
-    note for Duck "can fly\ncan swim\ncan dive\ncan help in debugging"
+    Vehicle : ID
+    Vehicle : MaxSpeed
+    Vehicle: Travel()
 
-    Animal <|-- Fish
-    Animal <|-- Zebra
-    Animal : +int age
-    Animal : +String gender
-    Animal: +isMammal()
-    Animal: +mate()
-    class Duck{
-        +String beakColor
-        +swim()
-        +quack()
+    class Car{
+        RegNr
+        EngineType
     }
-    class Fish{
-        -int sizeInFeet
-        -canEat()
+
+    class Plane{
+        MaxCruisingAltitude
+        Model
     }
-    class Zebra{
-        +bool is_wild
-        +run()
+
+    class Ship{
+        MaxTonnage
     }
