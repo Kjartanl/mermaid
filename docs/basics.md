@@ -54,10 +54,8 @@ sequenceDiagram
 
 participant A as First
 participant B as Second
-participant C as The New Guy
 A->>+B:  Message
 B-->>-A:  Response
-B->>c: Yo!
 ```
 
 ### Beyond this, there are separate syntax rules for each separate diagram type.
