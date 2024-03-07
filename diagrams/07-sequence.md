@@ -33,12 +33,19 @@ Dal->>DB: GetUserRoles()
 DB-->>Dal: List<Roles>
 Dal-->>Auth: List<Roles>
 Auth->>Auth: GenerateAccessToken()
-Auth-->>FE: Return AccessToken
+Auth-->>-FE: Return AccessToken
 FE-->>-U: Return AccessToken and display message <br />"Please don't click this button"
 
 U->>+FE: Clicks button 
 FE->>+Svc: RegisterClick(userId)
 
+Svc->>+Auth: CheckUserAccess(token)
+alt Invalid Token
+    Auth-->>Svc: False
+    Svc-->>FE: Access denied!
+    FE-->>U: Respond: "Please log in!"
+
+else Valid Token
 
     Auth-->>-Svc: True
 
@@ -65,4 +72,5 @@ FE->>+Svc: RegisterClick(userId)
         Svc-->>-FE: Return status: USER_LOGGED_OUT
         FE-->>-U: Display message:<br />"You have been logged out."
     end
+end
 ```
