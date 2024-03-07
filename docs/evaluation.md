@@ -1,23 +1,22 @@
 ﻿ 
 # Advantages & Drawbacks of using Mermaid
 
-## GOOD
+### Advantages 
 
- - Fairly easy to get started (assuming your're comfortable with code and / or markdown syntax).
- - Fairly quick to make simple diagrams
+ - Easy to get started (assuming comfortable with code).
+ - No extra tools (or licences!) required 
+ - Create simple diagrams quickly 
  - Works nicely with git 
  - Supported directly in GitHub and many other places
- - No extra tools required (or licences...)
  
- ### Bad
+ ### Potential Drawbacks
 
-- Potentially confusing syntax, especially in the beginning. 
+- Syntax
+  - Sometimes confusing, especially in the beginning
   - Not always easy to remember 
-  - A single character can mess up an entire diagram
-  - *Mitigating factors: You get warnings pointing to line numbers where there is an error.*
-- Can be messy for bigger diagrams
-- Not always easy to customize / organize elements the way you might want 
-  - **Example:** ER Diagrams(1)("Entity Relationship" - Database modeling diagrams*): Limited control over how / where boxes are placed.
+- Can be clunky for bigger diagrams
+- Customization & organization could be improved
+  - **Example:** : Limited placement control of boxes in ER Diagrams.
 
  >
  > ## Takeaway: 

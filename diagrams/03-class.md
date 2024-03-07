@@ -4,10 +4,6 @@
 
 classDiagram
 
-    Vehicle <|-- Car
-    Vehicle <|-- Plane
-    Vehicle <|-- Ship
-
     Vehicle : ID
     Vehicle : MaxSpeed
     Vehicle: Travel()
@@ -25,3 +21,7 @@ classDiagram
     class Ship{
         MaxTonnage
     }
+    
+    Vehicle <|-- Car
+    Vehicle <|-- Plane
+    Vehicle <|-- Ship

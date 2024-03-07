@@ -10,8 +10,7 @@ sequenceDiagram
     'theme': 'base',
     'themeVariables': {
       'primaryTextColor': '#ffffff',
-      'labelBoxBorderColor': '#ff0000',
-      'actorBkg': '#aa3333',
+      'actorBkg': '#cc3333',
       'activationBkgColor': '#ffff88'
     }
   }
