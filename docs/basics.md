@@ -1,17 +1,13 @@
 ﻿# Basic syntax and usage of mermaid
 
-> ### TLDR:  
-> #### In an MD file, add a code block with the language set to `mermaid`.
-> &nbsp;
+## Where to add Mermaid "code"
 
-## How and where to add Mermaid "code"
+Mermaid diagrams are created in code blocks in markdown documents using the following basic structure:
 
-In markdown you can add a code block where you specify e.g. a programming or script language, and this will cause your code to be formatted to suit the structure of that language.
-
-Mermaid uses this same principle, and all mermaid diagrams are created within the following basic structure:
+### Basic format
     
     ````mermaid
-    <Diagram-type-name>
+    <Diagram-type>
 
     <Optional Configuration (theme, colours, etc)> 
 
@@ -26,7 +22,7 @@ Mermaid uses this same principle, and all mermaid diagrams are created within th
         %%{
             init: {
                 'themeVariables': {
-                    'actorBkg': '#aa1144',
+                    'actorBkg': '#991144',
                     'actorTextColor': '#ffffff',
                     'signalTextColor': '#ffffff',
                     'signalColor': '#66ff66'
@@ -48,10 +44,10 @@ sequenceDiagram
 %%{
     init: {
         'themeVariables': {
-            'actorBkg': '#aa1144',
+            'actorBkg': '#993344",
             'actorTextColor': '#ffffff',
             'signalTextColor': '#ffffff',
-            'signalColor': '#66ff66'
+            'signalColor': '#55ff55'
         }
     }
 }%%
