@@ -5,6 +5,20 @@ The flow of control and information for a hypothetical use case:
 ```mermaid
 sequenceDiagram
 
+%%{
+  init: {
+    'theme': 'dark',
+    'themeVariables': {
+      'primaryTextColor': '#ffffff',
+      'actorBkg': '#dd4444',
+      'activationBkgColor': '#ffff99'
+    }
+  }
+}%%
+
+###########################
+### Define the participants 
+
 participant U as user
    
 box Front end
