@@ -14,6 +14,7 @@ end
 box Middle Tier
     participant Svc as Primary Service
     participant Cc as Click Count Service
+    participant Dal as Data Access Service
 end
 
 box Back End
@@ -31,19 +32,23 @@ FE->>+Svc: RegisterClick(userId)
 
 
     Svc->>+Cc: GetUserClickCount(userId)
-    Cc->>+DB: SelectClickCount(userId)
-    DB-->>-Cc: Return Number
+    Cc->>+Dal: GetClickCount(userId)
+    Dal->>+DB: SelectClickCount(userId)
+    DB-->>-Dal: Return Number
+    Dal-->>-Cc: Return NrOfClicks 
     Note right of Cc: Return the nr of clicks <br /> the user so far.
     Cc-->>-Svc: Return NrOfClicks
 
     alt NrOfClicks = 0
         Svc->>+Cc: IncrementClickCount(userId)
-        Cc->>+DB: IncrementClickCount(userId)
+        Cc->>+Dal: IncrementClickCount(userId)
+        Dal->>+DB: UpdateClickCount(userId)
         Svc-->>FE: Return status: UPDATE_WARNING
         FE-->>U: Display message:<br />"DO NOT CLICK THIS BUTTON AGAIN!"
     else NrOfClicks > 0
         Svc->>+Cc: IncrementClickCount(userId)
-        Cc->>+DB: IncrementClickCount(userId)
+        Cc->>+Dal: IncrementClickCount(userId)
+        Dal->>+DB: UpdateClickCount(userId)
         Svc-->>-FE: Return status: USER_LOGGED_OUT
         FE-->>-U: Display message:<br />"You have been logged out."
     end
