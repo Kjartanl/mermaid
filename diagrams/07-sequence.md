@@ -7,7 +7,7 @@ sequenceDiagram
 
 %%{
   init: {
-    'theme': 'base',
+    'theme': 'dark',
     'themeVariables': {
       'primaryTextColor': '#ffffff',
       'actorBkg': '#dd4444',
