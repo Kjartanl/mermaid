@@ -10,8 +10,8 @@ sequenceDiagram
     'theme': 'base',
     'themeVariables': {
       'primaryTextColor': '#ffffff',
-      'actorBkg': '#cc3333',
-      'activationBkgColor': '#ffff88'
+      'actorBkg': '#dd4444',
+      'activationBkgColor': '#ffff99'
     }
   }
 }%%
