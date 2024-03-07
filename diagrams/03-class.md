@@ -4,24 +4,50 @@
 
 classDiagram
 
-    Vehicle : ID
-    Vehicle : MaxSpeed
-    Vehicle: Travel()
-
-    class Car{
-        RegNr
-        EngineType
+    class ISomeInterface{
+        <<interface>>
+        DoWork()
     }
 
-    class Plane{
-        MaxCruisingAltitude
-        Model
+    class Alpha{
+        Id
+        PrimaryValue
+        DoWork()
     }
 
-    class Ship{
-        MaxTonnage
+    class Beta{
+        Id
+        OtherValue
+        DoWork()
+        DoSomethingElse()
     }
-    
-    Vehicle <|-- Car
-    Vehicle <|-- Plane
-    Vehicle <|-- Ship
+
+    class Gamma{
+        Id
+        OtherValue
+        DoWork()
+        DoSomethingElse()
+    }
+
+    class Delta{
+        Id
+        OtherValue
+        DoWork()
+        DoSomethingElse()
+    }
+
+    class Iota {
+        Id
+        OtherValue
+        DoWork()
+        DoSomethingElse()
+    }
+
+    Alpha --|> ISomeInterface
+    Beta --|> ISomeInterface
+    Delta --* Gamma : Composition
+    Iota --o Gamma : Aggregation
+    Delta -- Beta : linked
+    Delta ..> Alpha : dependency
+
+```` 

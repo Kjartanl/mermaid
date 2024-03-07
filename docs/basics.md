@@ -58,5 +58,5 @@ A->>+B:  Message
 B-->>-A:  Response
 ```
 
-### Beyond this, there are separate syntax rules for each separate diagram type.
+### NB: Beyond this, each diagram type has its own specific syntax!
 
